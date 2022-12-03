@@ -1,0 +1,17 @@
+{
+  "name": "zenn-content remote container dev",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "zenn",
+  "workspaceFolder": "/usr/src",
+  "extensions": [
+    "yzhang.markdown-all-in-one",
+    "jsynowiec.vscode-insertdatestring",
+    "davidanson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "bierner.emojisense"
+  ],
+  "settings": {
+    "editor.tabSize": 2
+  },
+  "shutdownAction": "none"
+}

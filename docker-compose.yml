@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  zenn:
+    build: .
+    image: slowhand/zenn
+    container_name: zenn
+    volumes:
+      - .:/usr/src
+      - modules_data:/usr/src/node_modules
+    command: ash -c "yarn install && yarn start"
+    ports:
+      - 8000:8000
+    working_dir: /usr/src
+
+volumes:
+  modules_data:
+    driver: local

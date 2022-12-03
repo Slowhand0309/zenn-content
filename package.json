@@ -1,0 +1,16 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Slowhand0309/zenn-content.git",
+  "author": "Slowhand0309",
+  "license": "MIT",
+  "scripts": {
+    "start": "zenn preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "zenn-cli": "^0.1.133"
+  }
+}
