@@ -8,7 +8,7 @@ services:
     volumes:
       - .:/usr/src
       - modules_data:/usr/src/node_modules
-    command: ash -c "yarn install && yarn start"
+    command: ash -c "yarn install && yarn preview"
     ports:
       - 8000:8000
     working_dir: /usr/src
