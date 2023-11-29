@@ -5,7 +5,7 @@ type: "tech" # tech: 技術記事 / idea: アイデア
 topics:
   - "dart"
   - "cli"
-published: false
+published: true
 ---
 # 概要
 Dartで新規にプロジェクトを作成してみようと思った時に、使えるテンプレートが何種類かあったので折角なら全部試してみようと思い、全種類を試してみました。
@@ -18,7 +18,7 @@ ProductName: macOS
 ProductVersion: 13.4.1
 ProductVersionExtra: (c)
 BuildVersion: 22F770820d
-$ dart --version                              
+$ dart --version
 Dart SDK version: 3.1.5 (stable) (Tue Oct 24 04:57:17 2023 +0000) on "macos_arm64"
 ```
 
