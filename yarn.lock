@@ -2973,10 +2973,10 @@ xtend@^4.0.0, xtend@^4.0.1:
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
-zenn-cli@^0.4.7:
-  version "0.4.7"
-  resolved "https://registry.yarnpkg.com/zenn-cli/-/zenn-cli-0.4.7.tgz#ca25e581cd31b483a0d6f97f616ef0d8b5dcd83b"
-  integrity sha512-PkCvxOmP5bvSRx+cGFaXBkOABUez0XVioq91X39oziUppwDPFiT47qlNPX3In8W0/ySASq0ur49TkOTtv5fiIw==
+zenn-cli@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/zenn-cli/-/zenn-cli-0.5.2.tgz#ee4ddc23b0ff35b952992d233d9e8321e85957d7"
+  integrity sha512-HwZDjkZ8b2BExSwJKE4ERqm3e6+W9J8yNGHbOdKAmUWz4+Z9akGTijFFdK2QsPHp3E1acaGmKvE1jE5MZkLO0A==
   dependencies:
     open "^10.2.0"
     package-manager-detector "^1.6.0"
