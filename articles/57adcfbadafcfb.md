@@ -3,12 +3,12 @@ title: "macOS→UbuntuでNo route to hostになった原因"
 emoji: "🌐"
 type: "tech"
 topics:
-  - "macos"
+  - "mac"
   - "ubuntu"
   - "ping"
-  - "networking"
-  - "troubleshooting"
-published: false
+  - "network"
+  - "トラブルシューティング"
+published: true
 ---
 
 # 概要
@@ -20,11 +20,9 @@ ping: sendto: No route to host
 Request timeout for icmp_seq 0
 ```
 
-Ubuntu側からmacOS端末やルーターへの`ping`は通るため、最初はUbuntuの固定IP設定、ファイアウォール、Wi-Fiと有線LANの競合などを疑いましが、しかし、最終的な原因は **macOS側で、****`ping`****を実行していたターミナルアプリに「ローカルネットワーク」へのアクセス権限が与えられていなかったこと** でした。。このせいで半日ハマってしまいました。。
+Ubuntu側からmacOS端末やルーターへの`ping`は通るため、最初はUbuntuの固定IP設定、ファイアウォール、Wi-Fiと有線LANの競合などを疑いましが、しかし、最終的な原因は **macOS側で、`ping`を実行していたターミナルアプリに「ローカルネットワーク」へのアクセス権限が与えられていなかったこと** でした。。このせいで半日ハマってしまいました。。
 
-原因が分かる「そんなこと〜」と思いますが、やっている時は考えもしない事なので同じような境遇で何かこの記事が役に立てば幸いです。
-
-> 💡 **今回の教訓**
+原因が分かると「そんなこと」と思いますが、やっている時は考えもしない事なので同じような境遇で何かこの記事が役に立てば幸いです。
 
 # 動作環境
 
@@ -131,8 +129,6 @@ Who has 192.168.x.x? Tell 192.168.x.x
 
 しかしARPすら観測できない場合、Ubuntu側のUFWやICMP応答設定よりも前の段階で通信が止まっています。
 
-> 🔍 **`tcpdump`****に何も出ない場合に疑う場所**
-
 # 原因：macOSのローカルネットワーク権限
 
 macOSでは、アプリがローカルネットワーク上の機器を検出・通信する際、アプリごとにアクセス許可が管理されます。
@@ -149,7 +145,7 @@ macOSでは、アプリがローカルネットワーク上の機器を検出・
 
 1. `ping`や`ssh`を実行しているターミナルアプリを有効にする
 
-![](/images/57adcfbadafcfb/3aea252da4fa807e8531e1fb2e4404d1.png)
+![](/images/57adcfbadafcfb/3aea252da4fa807e8531e1fb2e4404d1.png =500x)
 
 対象になり得るアプリは次のようなものです。
 
@@ -312,8 +308,8 @@ nc -vz 192.168.x.x 22
 
 # 参考
 
-[https://support.apple.com/ja-jp/guide/mac-help/mchla4f49138/mac](https://support.apple.com/ja-jp/guide/mac-help/mchla4f49138/mac)
+https://support.apple.com/ja-jp/guide/mac-help/mchla4f49138/mac
 
-[https://support.apple.com/ja-jp/102281](https://support.apple.com/ja-jp/102281)
+https://support.apple.com/ja-jp/102281
 
-[https://ubuntu.com/server/docs/how-to/security/firewalls/](https://ubuntu.com/server/docs/how-to/security/firewalls/)
+https://ubuntu.com/server/docs/how-to/security/firewalls/
